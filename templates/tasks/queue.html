@@ -1,0 +1,34 @@
+<table id="task-queue">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Module</th>
+      <th>Task</th>
+      <th>Added</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if not g.len(g.queue) %}
+      <tr>
+        <td colspan="5">
+          <em>No tasks in the queue.</em>
+        </td>
+      </tr>
+    {% else %}
+      {% for i, entry in g.queue %}
+        <tr data-entry-id="{{ entry.id }}">
+          <td>{{ i }}</td>
+          <td>{{ entry.task.module }}</td>
+          <td>{{ entry.task.name }}</td>
+          <td>{{ g.time.strftime('%d %b at %I:%M %p', g.time.localtime(entry.added)) }}</td>
+          <td class="actions">
+            <a href="" class="remove" title="Remove">&times;</a>
+            <a href="" class="up" title="Move Up">&uarr;</a>
+            <a href="" class="down" title="Move Down">&darr;</a>
+          </td>
+        </tr>
+      {% endfor %}
+    {% endif %}
+  </tbody>
+</table>

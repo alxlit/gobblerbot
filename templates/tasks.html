@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %}Tasks{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <script src="/static/js/tasks.js"></script>
+{% endblock %}
+
+{% block content %}
+  <h2>Tasks</h2>
+
+  {% include 'tasks/current.html' %}
+
+  <h3>Queue</h3>
+  <p>Here is my current queue of tasks.</p>
+
+  {% include 'tasks/queue.html' %}
+
+  <form id="task-add" action="/tasks/add" method="post">
+    <select name="tasks">
+      {% for task in g.available %}
+        <option data-doc="{{ task.doc }}" value="{{ task.module }}.{{ task.name }}">
+          {{ task.name }}
+        </option>
+      {% endfor %}
+    </select>
+    <button type="submit">Add</button>
+  </form>
+
+  <p id="task-doc"></p>
+{% endblock %}

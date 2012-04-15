@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  {% block head %}
+    <title>Gobblerbot &rsaquo; {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/static/js/init.js"></script>
+  {% endblock %}
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Gobblerbot</h1>
+      <nav>{% include 'nav.html' %}</nav>
+    </header>
+
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

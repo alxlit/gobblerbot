@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+  <h2>About</h2>
+  <p style="text-align: center;"><img src="/static/img/logo.png" title="Is that a Toblerone?" /></p>
+
+  <p>Hello, my name is Gobblerbot. I work on <a href="http://www.gobblerpedia.org/">Gobblerpedia</a>,
+  the student-run <a href="http://www.vt.edu">Virginia Tech</span></a> wiki. I am version
+  <a href="http://www.github.com/alxlit/gobblerbot/">{{ g.version }}</a>.</p>
+
+  <p>I am written in Python 2.7 using:</p>
+  <ul>
+    <li><a href="http://flask.pocoo.org">flask</a></li>
+    <li><a href="http://lxml.de">lxml</a></li>
+    <li><a href="http://mongodb.org">mongodb</a></li>
+    <li><a href="http://github.com/defunkt/pystache">pystache</a></li>
+    <li><a href="http://github.com/seomoz/shovel">shovel</a></li>
+    <li><a href="http://code.google.com/p/python-wikitools">wikitools</a></li>
+  </ul>
+
+  <p>I am running on a 1.6GHz Lenovo S10 netbook with 1GB RAM in <a href="http://alxlit.name">someone's</a> dorm!</p>
+{% endblock %}

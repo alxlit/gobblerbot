@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block title %}Status{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <script src="/static/js/status.js"></script>
+{% endblock %}
+
+{% block content %}
+  <h2>Status</h2>
+  <p><span class="status {{ status }}">{{ msg }}</span></p>
+
+  <h3>Actions</h3>
+
+  <table class="no-border">
+    <tr>
+      {% if g.errored or g.stopped: %}
+        <td><button id="start">Restart</button></td>
+        <td>Attempt to restart the worker thread.</td>
+      {% else %}
+        <td><button id="stop">Stop</button></td>
+        <td>Send the "stop" signal to the worker thread.</td>
+      {% endif %}
+    </tr>
+    <tr>
+      <td style="width: 25%"><button id="shutdown">Emergency shutdown</button></td>
+      <td>This kills the robot. Only an administrator will be able to restart it.</td>
+    </tr>
+  </table>
+
+  <h3>Log</h3>
+
+  <div class="log">
+    {% if not g.len(log): %}
+      <em>Nothing in the log.</em>
+    {% else %}
+      <code>{% for record in log: %}{{ record }}<br />{% endfor %}</code>
+    {% endif %}
+  </div>
+{% endblock %}

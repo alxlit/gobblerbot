@@ -1,0 +1,4 @@
+{% for i, item in g.nav %}
+  {% if i %}&middot;{% endif %}
+  <a href="{{ item.path }}" {%- if item.path == request.path -%}class="active"{% endif %}>{{ item.title }}</a>
+{% endfor %}

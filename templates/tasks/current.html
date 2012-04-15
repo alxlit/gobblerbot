@@ -1,0 +1,6 @@
+{% if not g.current: %}
+  <p>I'm not doing anything at the moment.</p>
+{% else %}
+  <p>My current task is <strong>{{ g.current.task.module }}.{{ g.current.task.name }}</strong>.
+  I started at <strong>{{ g.time.strftime('%d %b at %I:%M %p', g.time.localtime(g.current.added)) }}</strong></p>
+{% endif %}

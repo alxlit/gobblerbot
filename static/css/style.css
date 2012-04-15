@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+body {
+  background: #f0f0f0;
+  font: 13px/1.5 'Droid Sans Mono', monospace;
+  margin: 2em 0 5em 0;
+}
+
+h1, h2, h3, p, ul, ol, table, form {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+a { color: blue; }
+a:visited { color: blue; }
+
+p {}
+
+header {
+  border-bottom: 1px dashed #aaa;
+  overflow: auto;
+  margin-bottom: 18px;
+  padding-bottom: 0.5em;
+  text-align: right;
+}
+
+header h1 {
+  float: left;
+  margin-bottom: 0;
+}
+
+header nav {
+  margin-top: 13px;
+}
+
+header nav .active { font-weight: bold; }
+
+table {
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.no-border {
+  border: none;
+}
+
+table.no-border td, table.no-border th {
+  border: none;
+  padding-left: 0;
+}
+
+table td, table th {
+  border: 1px solid #aaa;
+  padding: 0.25em 0.5em;
+}
+
+table td.actions {
+  text-align: center;
+}
+
+table td.actions a {
+  background: #000;
+  border-radius: 0.5em;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  height: 1em;
+  line-height: 1;
+  opacity: 0.5;
+  text-align: center;
+  text-decoration: none;
+  width: 1em;
+}
+
+table td.actions a:hover {
+  opacity: 1;
+}
+
+.container {
+  background: #fff;
+  border: 2px solid #aaa;
+  border-top: none;
+  border-left: none;
+  padding: 2em;
+  margin: 0 auto;
+  width: 50em;
+}
+
+.log {
+  overflow: auto;
+  max-height: 300px;
+  width: 100%;
+}
+
+  .log code {
+    display: block;
+    padding: 0 0 1em 0;
+    width: 150%;
+  }
+
+.status {
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: 0.8em;
+  padding: 5px;
+}
+
+.status.good {
+  background-color: #dff2bf;
+  color: #4f8a10;
+}
+
+.status.warning {
+  background-color: #feefb3;
+  color: #9f6000;
+}
+
+.status.danger {
+  background-color: #ffbaba;
+  color: #d8000c;
+}
+
+#task-doc {
+  font-style: italic;
+}
