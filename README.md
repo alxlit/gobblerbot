@@ -1,5 +1,7 @@
 # Gobblerbot
 
+![](https://github.com/alxlit/gobblerbot/raw/master/static/img/logo.png)
+
 It's a bot (of sorts) that works on [Gobblerpedia], the student run Virginia
 Tech wiki. Really it's a single-worker task queue with a minimal web interface.
 It's all rather hacked together to be honest.
